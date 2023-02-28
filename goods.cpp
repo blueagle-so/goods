@@ -19,6 +19,12 @@ struct goods
     goods(int& id, string& name, int& min, int& max, string& count)
         : id(id), name(name), min(min), max(max), count(count)
     {}
+
+friend istream& operator>>(istream& is, goods& en);
+
+friend ostream& operator<<(ostream& os, const goods& en);
+
+
 };
 
 istream& operator>>(istream& is, goods& en)
